@@ -14,7 +14,7 @@ debug(`Listening for posts to /v1/github/${url}`)
 
 module.exports = router.post(url, (req, res, next) => {
   githubWebhook
-    .write(req.body)
+    .handle(req.body)
     .map(toJSON({ status: 'ok' }))
     .pipe(res);
 });
