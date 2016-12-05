@@ -1,9 +1,9 @@
-const githooks = [],
-      config = require('../config');
+let express = require('express');
+let request = require('request');
+let router = express.Router();
 
-let express = require('express'),
-    request = require('request'),
-    router = express.Router();
+const githooks = [];
+const config = require('../config');
 
 function logRequest (request) {
   if (githooks.length > 20) githooks.pop();
