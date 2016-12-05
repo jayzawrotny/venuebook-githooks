@@ -1,7 +1,6 @@
-let githubwebhook = require('./githubwebhook'),
-    express = require('express'),
-    router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-router.use('/github-webhook', githubwebhook);
+router.use('/github', require('./github'));
 
 module.exports = router;
