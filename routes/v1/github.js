@@ -1,9 +1,10 @@
 let _ = require('highland');
 let debug = require('debug')('webhooks:routes')
 let express = require('express');
-let router = express.Router();
 let util = require('../../lib/util/toJSON')
 let GithubWebhook = require('../../lib/webhooks/GithubWebhook');
+
+let router = express.Router();
 let githubWebhook = new GithubWebhook();
 
 const config = require('../../config');
